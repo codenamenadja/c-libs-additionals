@@ -6,7 +6,7 @@
 /*   By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/30 15:29:36 by jihhan            #+#    #+#             */
-/*   Updated: 2020/06/23 19:43:46 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/01 19:52:04 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
     if (!s)
         return (NULL);
-    ret = malloc(sizeof(char), (strlen(s) + 1));
+    ret = malloc(sizeof(char) * (strlen(s) + 1));
     if (!ret)
         return (NULL);
     i = 0;
