@@ -54,6 +54,13 @@ char        *ft_strmapi(char const *s, char (*f)(unsigned int, char));
         - success: string alloced with strdup, with proper value.
         - failure: (NULL) on if strdup fails.
 
+- ft_itox
+    - DESC: pointer of string, convert interger to hex-string.
+    - DEPENDS: string.h/strdup
+    - RETURNS:
+        - success: string alloced with strdup, with proper value.
+        - failure: (NULL) on if strdup fails.
+
 
 - ft_strmapi
     - DESC: pointer of string, apply callback f to *s-each apply callback f to strdup(s). 
