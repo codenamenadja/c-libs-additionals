@@ -6,32 +6,35 @@
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 08:09:58 by jihhan            #+#    #+#             */
-/*   Updated: 2020/07/14 08:09:59 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/19 21:06:32 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char    *ft_itox(int val)
+char        *ft_itox(int n)
 {
-    char    ret[3];
-    char    key;
+    char            i;
+    char            buf[16];
+    char            *buf_pt;
+    unsigned int    val;
+    unsigned int    msk;
 
-    if (val < 0 || val > 127)
-        return (NULL);
-    ret[0] = '0';
-    ret[1] = '0';
-    if (val)
+    if (!n)
+        return strdup("0\0");
+    n = (unsigned int) n;
+    msk = 0b11110000000000000000000000000000;
+    buf_pt = buf;
+    i = -1;
+    while (++i < 8)
     {
-        key = val / 16;
-        ret[0] = '0' + key;
-        if (key > 9)
-            ret[0] = 'a' + (key - 10);
-        key = val % 16;
-        ret[1] = '0' + key;
-        if (key > 9)
-            ret[1] = 'a' + (key - 10);
+        if ((val = (n & msk)))
+            val >>= (4 * (7-i));
+        if (val || buf_pt != buf)
+            *buf_pt++ = *("0123456789abcdef" + val);
+        msk >>= 4;
     }
-    ret[2] = '\0';
-    return (strdup(ret));
+    *buf_pt = '\0';
+    return strdup(buf);
 }
+
