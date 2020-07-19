@@ -16,6 +16,7 @@ char        *ft_strjoin(char const *s1, char const *s2);
 char        *ft_strtrim(char const *s1, char const *set);
 char        **ft_split(char const *s, char c);
 char        *ft_itoa(int n);
+char        *ft_itox(int n);
 char        *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 ```
 
@@ -56,6 +57,8 @@ char        *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 - ft_itox
     - DESC: pointer of string, convert interger to hex-string.
+        - Internally chages n to unsigned int to bit-wise operations
+        - masks n from ``0b11110000...`` to ``0b0000...1111`` and convert to hexkey.
     - DEPENDS: string.h/strdup
     - RETURNS:
         - success: string alloced with strdup, with proper value.
