@@ -6,7 +6,7 @@
 /*   By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/30 14:54:30 by jihhan            #+#    #+#             */
-/*   Updated: 2020/07/20 12:56:19 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/21 09:28:22 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char    *ft_itoa(int n)
 {
     int             div;
     unsigned int    left;
-    char            *res;
     int             i;
     char            buf[12];
 

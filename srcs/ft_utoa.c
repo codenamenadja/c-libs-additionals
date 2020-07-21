@@ -6,7 +6,7 @@
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 08:46:44 by jihhan            #+#    #+#             */
-/*   Updated: 2020/07/20 12:48:57 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/21 09:28:29 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char    *ft_utoa(unsigned int n)
 {
-    char            *res;
     int             i;
     char            buf[11];
     int             val;
