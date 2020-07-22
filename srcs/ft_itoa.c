@@ -6,7 +6,7 @@
 /*   By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/30 14:54:30 by jihhan            #+#    #+#             */
-/*   Updated: 2020/07/21 09:28:22 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/22 13:06:14 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,29 @@
 
 char    *ft_itoa(int n)
 {
-    int             div;
     unsigned int    left;
     int             i;
     char            buf[12];
+    char            *buf_pt;
 
     if (!n)
         return (strdup("0\0"));
-    div = 1000000000;
-    i = 0;
+    *(buf+11) = 0;
+    buf_pt = (buf + 10);
     left = n;
     if (n < 0)
     {
-        buf[0] = '-';
+        *buf = '-';
         left = ~n + 1;
-        i++;
     }
-    while(!(left / div))
-        div /= 10; 
     while (left >= 10)
     {
-        buf[i++] = '0' + (left / div);
-        left %= div;
-        div /= 10;
+        *buf_pt-- = '0' + (left % 10);
+        left /= 10;
     }
-    buf[i] = left + '0';
-    buf[i+1] = 0;
-    return (strdup(buf)); 
+    *buf_pt = '0' + left;
+    buf_pt = (*buf == '-') ? (buf_pt - 1) : buf_pt;
+    if (*buf == '-')
+        *buf_pt = '-';
+    return (strdup(buf_pt)); 
 }
-
