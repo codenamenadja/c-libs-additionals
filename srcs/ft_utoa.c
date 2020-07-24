@@ -6,22 +6,21 @@
 /*   By: jihhan <junehan.dev@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 08:46:44 by jihhan            #+#    #+#             */
-/*   Updated: 2020/07/21 09:28:29 by jihhan           ###   ########.fr       */
+/*   Updated: 2020/07/24 12:53:57 by jihhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <string.h>
 
-char    *ft_utoa(unsigned int n)
+char    *ft_utoa(unsigned long n)
 {
     int             i;
-    char            buf[11];
+    char            buf[20];
     int             val;
 
     if (!n)
         return (strdup("0\0"));
-    i = 9;
-    buf[11] = 0;
+    i = 18;
+    *(buf+19) = 0;
     while(n >= 10)
     {
         val = n % 10;
@@ -32,4 +31,3 @@ char    *ft_utoa(unsigned int n)
     *(buf + i) = n + '0';
     return (strdup(buf + (i)));
 }
-
