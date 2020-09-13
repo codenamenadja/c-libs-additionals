@@ -1,7 +1,7 @@
 additionals
 ===========
 
-[SOURCE]:https://github.com/codenamenadja/c-libs-additionals
+[SOURCE]: https://github.com/codenamenadja/c-libs-additionals
 
 intro
 -----
@@ -9,6 +9,12 @@ intro
 This packages is a project for to provide additional features of string manipulate functions.
 many of them uses ``malloc`` ``free`` glibc functions.
 outputs a static library of additional functions.
+
+.. code-block:: bash
+
+   make
+   make clean
+   make fclean
 
 makefile
 --------
