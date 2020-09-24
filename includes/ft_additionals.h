@@ -13,4 +13,8 @@ char        *ft_ltox(long n);
 char        *ft_itox(int n);
 char        *ft_utoa(unsigned long n);
 char        *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char        ft_putchar_fd(char c, int fd);
+char        ft_putstr_fd(char *s, int fd);
+char        ft_putendl_fd(char *s, int fd);
+char        ft_putnbr_fd(int n, int fd);
 #endif

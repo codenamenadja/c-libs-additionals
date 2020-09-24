@@ -36,7 +36,10 @@ ______
    char      *ft_itox(int n);
    char      *ft_utoa(unsigned int n);
    char      *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
+   void      ft_putchar_fd(char c, int fd);
+   void      ft_putstr_fd(char *s, int fd);
+   void      ft_putendl_fd(char *s, int fd);
+   void      ft_putnbr_fd(int n, int fd);
 
 functions
 ---------
@@ -98,3 +101,23 @@ functions
    - RETURNS:
       - success: ``(char *)`` with f(index, value) applied.
       - failure: ``(NULL)`` on malloc error or !s.
+
+``ft_putchar_fd``
+   - DESC: Outputs the character ``c`` to the given file descriptor.
+   - DEPENDS: unistd.h/write
+   - RETURNS: void
+
+``ft_putstr_fd``
+   - DESC: Outputs the string ``s`` to given file descriptor.
+   - DEPENDS: unistd.h/write
+   - RETURNS: void
+
+``ft_putendl_fd``
+   - DESC: Outputs the string ``s`` to the given file descriptor, followed by a new line.
+   - DEPENDS: unistd.h/write, stdlib.h/malloc, stdlib.h/free
+   - RETURNS: void
+
+``ft_putnbr_fd``
+   - DESC: Outputs the number ``n`` to the given file descriptor.
+   - DEPENDS: unistd.h/write
+   - RETURNS: void
