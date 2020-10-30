@@ -40,6 +40,9 @@ ______
    void      ft_putstr_fd(char *s, int fd);
    void      ft_putendl_fd(char *s, int fd);
    void      ft_putnbr_fd(int n, int fd);
+   int       **ft_intmapi(int **arr, int (*f)(unsigned int, int));
+
+
 
 functions
 ---------
@@ -102,6 +105,13 @@ functions
       - success: ``(char *)`` with f(index, value) applied.
       - failure: ``(NULL)`` on malloc error or !s.
 
+``ft_intmapi``
+   - DESC: pointer of integer, apply callback f to each pointer with index and alloc-initialize with new ``int **ret``
+   - DEPENDS: stdlib.h/malloc
+   - RETURNS:
+      - success: ``(int **)`` with f(index, value) applied.
+      - failure: ``(NULL)`` on malloc error or !arr or !*arr.
+
 ``ft_putchar_fd``
    - DESC: Outputs the character ``c`` to the given file descriptor.
    - DEPENDS: unistd.h/write
@@ -121,3 +131,4 @@ functions
    - DESC: Outputs the number ``n`` to the given file descriptor.
    - DEPENDS: unistd.h/write
    - RETURNS: void
+
