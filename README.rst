@@ -41,8 +41,7 @@ ______
    void      ft_putendl_fd(char *s, int fd);
    void      ft_putnbr_fd(int n, int fd);
    int       **ft_intmapi(int **arr, int (*f)(unsigned int, int));
-
-
+   void      *ft_realloc(void *ptr, size_t size);
 
 functions
 ---------
@@ -132,3 +131,9 @@ functions
    - DEPENDS: unistd.h/write
    - RETURNS: void
 
+``*ft_realloc``
+   - DESC: Changes the size of the mem-block by ``ptr`` to ``size`` bytes.
+   - DEPENDS: stdlib.h/free, stdlib.h/malloc
+   - RETURNS:
+      - success: ``NULL`` on size is 0 or valid memory pointer ``ret``
+      - failure: ``NULL`` on mem alloc error.
