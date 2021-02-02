@@ -18,6 +18,7 @@ char        ft_putstr_fd(char *s, int fd);
 char        ft_putendl_fd(char *s, int fd);
 char        ft_putnbr_fd(int n, int fd);
 int         **ft_intmapi(int **arr, int (*f)(unsigned int, int));
+void        *ft_realloc(void *ptr, size_t size);
 #endif
 
 
