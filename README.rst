@@ -131,7 +131,7 @@ functions
    - DEPENDS: unistd.h/write
    - RETURNS: void
 
-``*ft_realloc``
+``ft_realloc``
    - DESC: Changes the size of the mem-block by ``ptr`` to ``size`` bytes.
    - DEPENDS: stdlib.h/free, stdlib.h/malloc
    - RETURNS:
