@@ -6,7 +6,7 @@
 #    By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/12 19:53:43 by jihhan            #+#    #+#              #
-#    Updated: 2021/02/02 18:35:31 by jihhan           ###   ########.fr        #
+#    Updated: 2021/04/27 17:36:40 by junehan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # Header
 CFLAGS				= -Wall -Werror -Wextra -I. -c
 .DEFAULT_GOAL		:= all
-NAME				= additionals.a
+NAME				= ft_additionals.a
 
 SOURCES				= $(wildcard srcs/*.c)
 OBJECTS				= $(patsubst %.c,%.o,$(SOURCES))
