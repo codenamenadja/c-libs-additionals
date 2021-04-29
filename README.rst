@@ -1,7 +1,7 @@
 additionals
 ===========
 
-[SOURCE]: https://github.com/codenamenadja/c-libs-additionals
+[SOURCE]: https://github.com/junehan-dev/c-libs-additionals
 
 intro
 -----
@@ -19,9 +19,9 @@ outputs a static library of additional functions.
 makefile
 --------
 
-   .. literalinclude:: Makefile
-      :language: makefile
-      :encoding: latin-1
+.. literalinclude:: ./Makefile
+   :language: makefile
+   :encoding: latin-1
 
 header
 ______
