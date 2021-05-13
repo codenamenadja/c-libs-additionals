@@ -6,13 +6,13 @@
 #    By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/12 19:53:43 by jihhan            #+#    #+#              #
-#    Updated: 2021/04/27 17:36:40 by junehan          ###   ########.fr        #
+#    Updated: 2021/05/13 13:37:58 by junehan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #REQUIRED TARGETS: $(NAME) all clean fclean
 # Header
-CFLAGS				= -Wall -Werror -Wextra -I. -c
+CFLAGS				= -Wall -Werror -Wextra -Iincludes
 .DEFAULT_GOAL		:= all
 NAME				= ft_additionals.a
 
