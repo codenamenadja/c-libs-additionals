@@ -6,12 +6,13 @@
 #    By: jihhan <jihhan@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/12 19:53:43 by jihhan            #+#    #+#              #
-#    Updated: 2021/05/13 13:37:58 by junehan          ###   ########.fr        #
+#    Updated: 2021/05/13 15:30:20 by junehan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #REQUIRED TARGETS: $(NAME) all clean fclean
 # Header
+CC					= gcc
 CFLAGS				= -Wall -Werror -Wextra -Iincludes
 .DEFAULT_GOAL		:= all
 NAME				= ft_additionals.a
@@ -36,3 +37,9 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
+
+.PHONY: test
+test:
+	$(CC) $(CFLAGS) tests/test_strstr.c $(NAME) -o $@.out
+	./$@.out
+	rm $@.out
